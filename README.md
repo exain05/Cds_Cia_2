@@ -59,7 +59,8 @@ The analysis notebook presents the findings as a progressive data story using in
 * **NumPy** – Numerical operations.
 * **Plotly** – Interactive data visualization.
 * **Jupyter Notebook** – Data analysis and presentation environment.
-
+* **IPython / HTML** – Rendering custom-styled KPI cards and UI layout components.
+  
 ## Repository Structure
 
 ```text
