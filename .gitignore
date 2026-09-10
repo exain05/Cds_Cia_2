@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large WFP datasets
+data/raw/*.csv
+data/processed/*.csv
+
+# Generated outputs
+outputs/*.csv
+outputs/*.html
+outputs/*.png
+outputs/*.jpg
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment / secrets
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
