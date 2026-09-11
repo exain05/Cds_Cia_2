@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Global Food Price & Commodity Market Analysis</title>
+
+    <style>
+
+        /* =========================================================
+           GLOBAL
+        ========================================================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5ebdd;
+            color: #4A454A;
+            line-height: 1.6;
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            padding: 85px 8% 65px;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    #f7dcbe 0%,
+                    #f1e1d9 42%,
+                    #ead4ee 75%,
+                    #b48ab1 100%
+                );
+
+            border-bottom: 1px solid #DED5DB;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            line-height: 1.08;
+            max-width: 900px;
+            margin-bottom: 20px;
+
+            font-weight: 700;
+
+            color: #403A40;
+
+            letter-spacing: -0.5px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 820px;
+
+            color: #6A6268;
+        }
+
+
+        /* =========================================================
+           MAIN CONTAINER
+        ========================================================= */
+
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+
+        /* =========================================================
+           INTRODUCTION
+        ========================================================= */
+
+        .intro {
+            padding: 55px 0 25px;
+        }
+
+        .intro h2 {
+            font-size: 30px;
+            margin-bottom: 12px;
+
+            color: #4A424A;
+        }
+
+        .intro p {
+            max-width: 900px;
+
+            color: #756D72;
+
+            font-size: 16px;
+        }
+
+
+        /* =========================================================
+           SECTION TITLES
+        ========================================================= */
+
+        .section-title {
+            margin-top: 55px;
+            margin-bottom: 25px;
+
+            padding-bottom: 11px;
+
+            border-bottom: 1px solid #D9CFD9;
+
+            font-size: 26px;
+            font-weight: 600;
+
+            color: #5A4E5D;
+        }
+
+
+        /* =========================================================
+           CHART CARDS
+        ========================================================= */
+
+        .chart-card {
+            background: #FEFDFC;
+
+            border-radius: 16px;
+
+            margin: 28px 0;
+
+            padding: 18px;
+
+            border: 1px solid #E6DEE2;
+
+            box-shadow:
+                0 4px 18px rgba(74, 65, 74, 0.055);
+        }
+
+        .chart-card h3 {
+            font-size: 21px;
+
+            margin: 8px 10px 8px;
+
+            color: #4C454C;
+
+            font-weight: 600;
+        }
+
+        .chart-card p {
+            margin: 0 10px 15px;
+
+            color: #827980;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================================================
+           PLOTLY IFRAMES
+        ========================================================= */
+
+        iframe {
+            display: block;
+
+            width: 100%;
+
+            height: 650px;
+
+            border: none;
+
+            border-radius: 12px;
+
+            background: #FBF8F4;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        .footer {
+            margin-top: 70px;
+
+            padding: 38px 8%;
+
+            text-align: center;
+
+            background: #514956;
+
+            color: #F7F3F0;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 768px) {
+
+            .hero {
+                padding: 50px 6% 45px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .intro {
+                padding-top: 40px;
+            }
+
+            .intro h2 {
+                font-size: 26px;
+            }
+
+            .section-title {
+                font-size: 23px;
+            }
+
+            .chart-card {
+                padding: 12px;
+            }
+
+            .chart-card h3 {
+                font-size: 18px;
+            }
+
+            iframe {
+                height: 550px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+  
+
+    <section class="hero">
+
+        <h1>
+            Global Food Price & Commodity Market Analysis
+        </h1>
+
+        <p>
+            Exploring how food prices changed across countries, commodities,
+            food categories and market types from 2019 to 2026.
+        </p>
+
+    </section>
+
+
+    
+
+    <main class="container">
+
+
+  
+
+        <section class="intro">
+
+            <h2>
+                Interactive Data Story
+            </h2>
+
+            <p>
+                This project uses World Food Programme Global Food Prices data
+                to examine changes in observed food prices before, during and
+                after the COVID-19 period. The visualizations below explore
+                global trends, major price shocks, geographic differences,
+                commodities, categories, market types and price volatility.
+            </p>
+
+        </section>
+
+
+        <h2 class="section-title">
+            01 — The Global Price Story
+        </h2>
+
+
+        <!-- GRAPH 1 -->
+
+        <div class="chart-card">
+
+            <h3>
+                1. Global Median Food Prices Over Time
+            </h3>
+
+            <p>
+                The overall movement of median observed food prices across
+                the study period.
+            </p>
+
+            <iframe
+                src="outputs/01_global_median_food_prices.html">
+            </iframe>
+
+        </div>
+
+
+        <!-- GRAPH 2 -->
+
+        <div class="chart-card">
+
+            <h3>
+                2. The Global Food-Price Shock
+            </h3>
+
+            <p>
+                Food prices indexed to 2019 = 100 to highlight the scale of
+                the major price increase.
+            </p>
+
+            <iframe
+                src="outputs/02_global_food_price_shock.html">
+            </iframe>
+
+        </div>
+
+
+        <!-- GRAPH 3 -->
+
+        <div class="chart-card">
+
+            <h3>
+                3. Year-on-Year Change in Global Food Prices
+            </h3>
+
+            <p>
+                Annual percentage changes reveal when price growth accelerated
+                or slowed.
+            </p>
+
+            <iframe
+                src="outputs/03_year_on_year_food_price_change.html">
+            </iframe>
+
+        </div>
+
+
+        <!-- GRAPH 4 -->
+
+        <div class="chart-card">
+
+            <h3>
+                4. Food Prices Across Major Historical Periods
+            </h3>
+
+            <p>
+                Comparison of major periods surrounding the COVID-19 shock
+                and subsequent price changes.
+            </p>
+
+            <iframe
+                src="outputs/04_food_prices_historical_periods.html">
+            </iframe>
+
+        </div>
+
+
+        <h2 class="section-title">
+            02 — Where Did Prices Change?
+        </h2>
+
+
+        <!-- GRAPH 5 -->
+
+        <div class="chart-card">
+
+            <h3>
+                5. Global Food-Price Hotspots
+            </h3>
+
+            <p>
+                Country-level differences in median observed food-price
+                changes across the selected period.
+            </p>
+
+            <iframe
+                src="outputs/05_global_food_price_hotspots.html">
+            </iframe>
+
+        </div>
+
+
+        <h2 class="section-title">
+            03 — What Changed?
+        </h2>
+
+
+        <!-- GRAPH 6 -->
+
+        <div class="chart-card">
+
+            <h3>
+                6. Commodities With the Largest Price Changes
+            </h3>
+
+            <p>
+                Highlights commodities that experienced the largest changes
+                in observed prices.
+            </p>
+
+            <iframe
+                src="outputs/06_largest_commodity_price_changes.html">
+            </iframe>
+
+        </div>
+
+
+        <!-- GRAPH 7 -->
+
+        <div class="chart-card">
+
+            <h3>
+                7. Food-Price Change by Category
+            </h3>
+
+            <p>
+                Compares price movements across major food categories.
+            </p>
+
+            <iframe
+                src="outputs/07_food_price_change_by_category.html">
+            </iframe>
+
+        </div>
+
+
+        <h2 class="section-title">
+            04 — How Did Markets Behave?
+        </h2>
+
+
+        <!-- GRAPH 8 -->
+
+        <div class="chart-card">
+
+            <h3>
+                8. Retail vs Wholesale Food Prices
+            </h3>
+
+            <p>
+                Comparison of observed food-price patterns between retail
+                and wholesale markets.
+            </p>
+
+            <iframe
+                src="outputs/08_retail_vs_wholesale_prices.html">
+            </iframe>
+
+        </div>
+
+
+        <!-- GRAPH 9 -->
+
+        <div class="chart-card">
+
+            <h3>
+                9. Most Volatile Food Commodities
+            </h3>
+
+            <p>
+                Identifies commodities with the greatest variability in
+                observed USD prices.
+            </p>
+
+            <iframe
+                src="outputs/09_most_volatile_food_commodities.html">
+            </iframe>
+
+        </div>
+
+        <h2 class="section-title">
+            05 — Understanding the Dataset
+        </h2>
+
+
+    
+
+        <div class="chart-card">
+
+            <h3>
+                10. Expansion of the Food-Price Dataset
+            </h3>
+
+            <p>
+                Shows how the countries and commodities represented in the
+                dataset changed across the study period.
+            </p>
+
+            <iframe
+                src="outputs/10_food_price_dataset_coverage.html">
+            </iframe>
+
+        </div>
+
+
+    </main>
+
+    <footer class="footer">
+
+        <p>
+            Global Food Price & Commodity Market Analysis
+        </p>
+
+        <p>
+            World Food Programme Global Food Prices | 2019–2026
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

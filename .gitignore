@@ -27,3 +27,4 @@ env/
 Thumbs.db
 
 #vscode
+.vscode/
